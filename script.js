@@ -45,7 +45,7 @@ secondBtn.addEventListener("click", () => {
 // event listener to bring out search results and also get the value of the user search from first input
 
 searchBtn.addEventListener("click", function () {
-  if (text === "Search") {
+  if (text === "Search" && searchBox.value) {
     firstContainer.style.display = "none";
     secondContainer.style.display = "flex";
     userSearch = searchBox.value;
