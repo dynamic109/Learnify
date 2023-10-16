@@ -7,7 +7,7 @@
     <title>Document</title>
   </head>
   <body>
-    <section class="search-box-container">
+    <section class="search-box-container" id="container-1">
       <div class="search-box">
         <button class="btn-search" id="search-btn">Tap</button>
         <input
@@ -19,21 +19,18 @@
       </div>
     </section>
 
-    <section style="background: black; width: 100%; height: 100vh">
-      <div class="container">
-        <div
-          class="search-box"
-          style="border: 2px solid white; width: 100%; height: 100vh"
-        >
-          <div>
-            <button class="btn-search" id="search-btn">Tap</button>
-            <input
-              id="search-box"
-              type="text"
-              class="input-search"
-              placeholder="Type to Search..."
-            />
-          </div>
+    <section>
+      <div class="container" id="container-2">
+        <div class="search-box-2">
+          <button class="btn-search-2" id="search-btn">
+            <img src="./images/search.svg" id="search-icon" />
+          </button>
+          <input
+            id="search-box"
+            type="text"
+            class="input-search-2"
+            placeholder="Type to Search..."
+          />
         </div>
       </div>
     </section>
