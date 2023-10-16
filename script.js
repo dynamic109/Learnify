@@ -1,13 +1,16 @@
 const searchBtn = document.getElementById("search-btn");
-const searchBox = document.getElementById("search-box");
+const searchBoxAll = document.getElementById("search-box-all");
 const firstContainer = document.getElementById("container-1");
 const secondContainer = document.getElementById("container-2");
+const secondInput = document.getElementById("search-box-2");
 let text = "";
+
+let inputText = searchBox.value;
 
 searchBox.addEventListener("focus", function () {
   searchBtn.textContent = "Search";
   text = searchBtn.textContent;
-  console.log(text);
+
   searchBtn.style.paddingRight = "3.5rem";
 });
 
@@ -32,4 +35,11 @@ searchBtn.addEventListener("click", function () {
   } else {
     searchBox.style.border = "2px solid purple";
   }
+
+  console.log(searchBox.value);
+  console.log(secondInput.value);
+});
+
+searchBtnAll.addEventListener("click", function () {
+  console.log(secondInput.value);
 });
