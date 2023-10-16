@@ -42,7 +42,7 @@ secondBtn.addEventListener("click", () => {
   secondInput.value = "";
 });
 
-// event listener to bring out search results and also get the value of the user search
+// event listener to bring out search results and also get the value of the user search from first input
 
 searchBtn.addEventListener("click", function () {
   if (text === "Search") {
