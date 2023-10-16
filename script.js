@@ -1,16 +1,18 @@
+//variables used in code
 const searchBtn = document.getElementById("search-btn");
-const searchBoxAll = document.getElementById("search-box-all");
+const searchBox = document.getElementById("search-box");
 const firstContainer = document.getElementById("container-1");
 const secondContainer = document.getElementById("container-2");
 const secondInput = document.getElementById("search-box-2");
-let text = "";
+const secondBtn = document.getElementById("search-btn-2");
+let text;
+let userSearch;
 
-let inputText = searchBox.value;
+//Event listener to change the text of main button to search
 
 searchBox.addEventListener("focus", function () {
   searchBtn.textContent = "Search";
   text = searchBtn.textContent;
-
   searchBtn.style.paddingRight = "3.5rem";
 });
 
@@ -28,18 +30,28 @@ searchBox.addEventListener("focusout", function () {
   searchBtn.textContent = "Tap";
 });
 
+//Event listener to get value of second input
+
+secondBtn.addEventListener("click", () => {
+  if (secondInput.value) {
+    userSearch = secondInput.value;
+    console.log(userSearch);
+  } else {
+  }
+
+  secondInput.value = "";
+});
+
+// event listener to bring out search results and also get the value of the user search
+
 searchBtn.addEventListener("click", function () {
   if (text === "Search") {
     firstContainer.style.display = "none";
     secondContainer.style.display = "flex";
+    userSearch = searchBox.value;
+    console.log(userSearch);
   } else {
-    searchBox.style.border = "2px solid purple";
+    firstContainer.style.display = "flex";
+    secondContainer.style.display = "none";
   }
-
-  console.log(searchBox.value);
-  console.log(secondInput.value);
-});
-
-searchBtnAll.addEventListener("click", function () {
-  console.log(secondInput.value);
 });
